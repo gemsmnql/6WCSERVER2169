@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Insert here the link to the CDN Vue package -->
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+    
+    <title>Vue JS Demo Application</title>
+</head>
+<body>
+    
+    <div id="app">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+        <!-- Events on Vue using v-on -->
+        <button v-on:click="age++">Get Older</button>
+        <button v-on:click="age--">Get Younger</button>
+        <button @click="title = 'The title has changed.'">Change Title</button>
+    </div>
+
+    <div id="two-way-binding">
+        <p>{{ message }}</p>
+        <input v-model="message" />
+    </div>
+
+    <!-- using v-if -->
+    <div id="conditional-rendering">
+    <span v-if="seen">Now you see me</span>
+    </div>
+
+    <!-- this is hooked up to a method in the book.js -->
+    <div id = "books">
+        <div v-if = "showBooks">
+            <p>{{ btitle}} - {{ bauthor }} - {{ year }}</p>
+        </div>
+
+        <button @click = "toggleShowBooks">
+            <span v-if = "showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+    </div>
+
+    <!-- using v-for directive -->
+     <div id = "list-rendering">
+        <ol>
+            <li v-for = "todo in todos">
+                {{ todo.text }}
+            </li>
+        </ol>
+     </div>
+
+    <!-- link to listfor.js -->
+    <script src = "listfor.js"></script>
+
+
+    <!-- link to book.js -->
+    <script src = "book.js"></script>
+
+    <!-- link to conditionalif.js -->
+    <script src="conditionalif.js"></script>
+
+    <script src = "twoway.js"></script>
+
+     <!-- Insert the below code to link to app.js -->
+    <script src="app.js"></script>
+
+</body>
+</html>
