@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Routes</h1>
+    <p>GET /api/users: Returns all users.</p>
+    <p>GET /api/users/: Fetches a specific user by ID.</p>
+    <p>GET /api/users/: Retrieves and displays parameters.</p>
+
+    <form action = 'http://127.0.0.1:3000/process_post' method = 'POST'>
+    <h1>Add User</h1>
+    Name: <input type = "text" name = "name"> <br>
+    Email: <input type = "email" name = "email"> <br>
+    Age: <input type = "text" name = "age"> <br>
+    Salary: <input type = "text" name = "salary"> <br>
+    <input type = "submit" value = "Add">
+</form>
+
+<form action = 'http://127.0.0.1:3000/delete_user' method = 'POST'>
+    <h1>Delete User</h1>
+    UserID: <input type = "text" name = "id"> <br>
+    <input type = "submit" value = "Delete">
+</form>
+</body>
+</html>
